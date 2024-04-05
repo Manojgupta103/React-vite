@@ -1,0 +1,29 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: aqua;
+}
+
+.button{
+  background-color: rgb(123, 27, 27);
+  border-radius: 5px;
+}
+/* .Card {
+  padding: 2em;
+  margin: 30px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.2);
+
+}
+
+.div{
+  background-color: antiquewhite;
+  margin: 30px;
+  display: flex;
+  justify-content: space-around;
+} */
+
+

@@ -1,0 +1,31 @@
+npx create-vite your-project-name
+cd your-project-name 
+npm run dev
+
+//Bootstrap
+npm i Bootstrap
+npm i react-Bootstrap
+
+//link to font awesome
+1) npm i --save @fortawesome/fontawesome-svg-core
+
+npm i --save @fortawesome/free-solid-svg-icons
+npm i --save @fortawesome/free-regular-svg-icons
+npm i --save @fortawesome/free-brands-svg-icons
+
+npm i --save @fortawesome/free-brands-svg-icons
+
+//tailwind css
+Install Tailwind CSS with Create React App
+
+npm install -D tailwindcss
+npx tailwindcss init
+
+Add the Tailwind directives to your CSS
+Add the @tailwind directives for each of Tailwind’s layers to your ./src/index.css file.
+
+index.css
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
