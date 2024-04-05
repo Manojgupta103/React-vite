@@ -1,2 +1,2 @@
 # React-vite
- Learning Reacy
+ Learning React
