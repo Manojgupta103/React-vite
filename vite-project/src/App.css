@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -24,6 +28,24 @@
   margin: 30px;
   display: flex;
   justify-content: space-around;
+} */
+
+/* .menu{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  transition: 0.5s;
+  width: 100%;
+  padding: 20px 0px;
+  background-color: aqua;
+}
+
+.activeMenu{
+  left:0%;
+}
+.micon{
+  position: absolute;
+  right: 10px;
 } */
 
 

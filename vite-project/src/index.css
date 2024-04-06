@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+/* body{
     background-color: #f3f4f6;
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -46,4 +46,27 @@ button{
 .para{
     color: red;
     line-height: 1.6;
+} */
+
+
+.menu{
+    width: 80%;
+    left: -100%;
+    text-align: left;
+    position: fixed;
+    list-style: none;
+    height: 100vh;
+    padding: 10px 0px;
+    background-color: aqua;
+  }
+
+
+.activeMenu{
+    left:0%;
 }
+.micon{
+    position: absolute;
+    right: 10px;
+  }
+  
+  

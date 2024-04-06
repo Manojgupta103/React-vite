@@ -148,17 +148,44 @@ import Button from 'react-bootstrap/Button';
 // }
 // export default ternary;
 
-function ShowPassword(){
-  let [pstatus,setPstatus]=useState(false);
+// function ShowPassword(){
+//   let [pstatus,setPstatus]=useState(false);
 
-  return(
-    <div className='App'>
-      <input type={pstatus ? 'text' : "password"}/> 
-      <button onClick={() => setPstatus(!pstatus)}>
-      {pstatus ? "Hide" : "Show"}
-      </button>
-      <br></br>
+//   return(
+//     <div className='App'>
+//       <input type={pstatus ? 'text' : "password"}/> 
+//       <button onClick={() => setPstatus(!pstatus)}>
+//       {pstatus ? "Hide" : "Show"}
+//       </button>
+//       <br></br>
+//     </div>
+//   )
+// }
+// export default ShowPassword;
+
+
+
+function ResponsiveMenu() {
+  let [menuStatus, setMenuStatus] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuStatus(!menuStatus);
+  };
+
+  return (
+    <div className="App">
+      <Button className="micon" onClick={toggleMenu}>
+        {menuStatus ? <span>&times;</span> : <span>&#9776;</span>}
+      </Button>
+      <div className={`menu ${menuStatus ? 'activeMenu' : ''}`}>
+        <li>Home</li>
+        <li>About</li>
+        <li>Course</li>
+        <li>Gallery</li>
+        <li>Contact</li>
+      </div>
     </div>
-  )
+  );
 }
-export default ShowPassword;
+
+export default ResponsiveMenu;
