@@ -130,20 +130,36 @@ import Button from 'react-bootstrap/Button';
 // export default App;
 
 
-function ternary(){  
-  let [status, setStatus]=useState(false);
-  return (
+// function ternary(){  
+//   let [status, setStatus]=useState(false);
+//   return (
+//     <div className='App'>
+//       <Button onClick={()=>setStatus(!status)}>
+//       {(status) ? "Hide" : "Show"}
+//         </Button>
+//       { 
+//       (status) ?
+//       <p className='para'>Welcome to React</p>
+//       :
+//       ""
+// }
+//     </div>
+//   );
+// }
+// export default ternary;
+
+function ShowPassword(){
+  let [pstatus,setPstatus]=useState(false);
+
+  return(
     <div className='App'>
-      <Button onClick={()=>setStatus(!status)}>
-      {(status) ? "Hide" : "Show"}
-        </Button>
-      { 
-      (status) ?
-      <p className='para'>Welcome to React</p>
-      :
-      ""
-}
+      <input type={pstatus ? 'text' : "password"}/> 
+      <button onClick={() => setPstatus(!pstatus)}>
+      {pstatus ? "Hide" : "Show"}
+      </button>
+      <br></br>
     </div>
-  );
+  )
 }
-export default ternary;
+
+export default ShowPassword;
