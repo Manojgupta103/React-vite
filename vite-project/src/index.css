@@ -64,8 +64,7 @@ button{
     height: 100vh;
     padding: 10px 0px;
     background-color: aqua;
-  }
-
+}
 
 .activeMenu{
     left:0%;
@@ -109,4 +108,43 @@ button{
     right: -30px;
     top: 100px;
     transform: rotate(90deg);
+}
+div h1{
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    margin-top: 20px;
+    font-size: 2rem;
+}
+.faqouter{
+    width: 1320px;
+    margin:  auto;
+}
+
+.faqitems{
+    border: 1px solid red;
+    margin-bottom: 20px;
+}
+
+.faqitems h2{
+    margin: 0px;
+    padding: 10px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-align: left;
+}
+
+.faqitems p{
+    height: 0px;
+    margin: 0px;
+    padding: 0px;
+    transition: 0.5s;
+    text-align: left;
+    transform: scaleY(0);
+}
+
+.activesAns{
+    height: auto !important;
+    transform: scaleY(1) !important;
+    padding: 10px !important;
 }

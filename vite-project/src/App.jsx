@@ -8,6 +8,8 @@ import { useState } from 'react';
 import './index.css';
 // import { Col, Container, Row } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
+import { questions } from './data/faqQuestion';
+// import { blog } from './data/blog';
 // import Card from 'react-bootstrap/Card';
 // import { blog } from './data/blog';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -166,7 +168,8 @@ import Button from 'react-bootstrap/Button';
 
 
 function ResponsiveMenu() {
-  let [menuStatus, setMenuStatus] = useState(false);
+  let [menuStatus, setMenuStatus] = useState(questions[0].id) 
+  let [showAns, setShowAns] = useState(false);
 
   const toggleMenu = () => {
     setMenuStatus(!menuStatus);
@@ -174,6 +177,23 @@ function ResponsiveMenu() {
 let [modalStatus,setModalStatus] = useState(false);
   return (
     <div className="App">
+      <div>
+        <h1>Frequently Asked Questions</h1>
+        <div className='faqouter'>
+
+{questions.map((faqitems,i)=>{
+  return (
+    // eslint-disable-next-line react/jsx-key
+    <div className='faqitems'>
+      <h2 onClick={()=>setShowAns(faqitems.id)}>{faqitems.question}</h2>
+      <p className={showAns==faqitems.id ? 'activesAns' : ''}>{faqitems.answer}</p>
+    </div>
+  )
+})}
+        </div>
+      </div>
+
+    
       <button className="en" onClick={() => setModalStatus(true)}>Enquire Now</button>
       
       <div onClick={()=>setModalStatus(false)} className={`modalOverLay ${modalStatus?'modalShow':''}`}>
@@ -195,10 +215,11 @@ let [modalStatus,setModalStatus] = useState(false);
         <li>Course</li>
         <li>Gallery</li>
         <li>Contact</li>
-
       </div>
     </div>
   );
 }
+
+
 
 export default ResponsiveMenu;
