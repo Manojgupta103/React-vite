@@ -171,9 +171,21 @@ function ResponsiveMenu() {
   const toggleMenu = () => {
     setMenuStatus(!menuStatus);
   };
-
+let [modalStatus,setModalStatus] = useState(false);
   return (
     <div className="App">
+      <button className="en" onClick={() => setModalStatus(true)}>Enquire Now</button>
+      
+      <div onClick={()=>setModalStatus(false)} className={`modalOverLay ${modalStatus?'modalShow':''}`}>
+      <div className={`ModalDiv ${modalStatus?'showModalDiv':''}`}>
+          <h3>Enquiry Now <span onClick={() => setModalStatus(false)}>&times;</span></h3>
+        </div>
+
+      </div>
+
+<h1 className="text-3xl font-bold underline text-blue-400">
+      Hello world!
+    </h1>
       <Button className="micon" onClick={toggleMenu}>
         {menuStatus ? <span>&times;</span> : <span>&#9776;</span>}
       </Button>
@@ -183,6 +195,7 @@ function ResponsiveMenu() {
         <li>Course</li>
         <li>Gallery</li>
         <li>Contact</li>
+
       </div>
     </div>
   );

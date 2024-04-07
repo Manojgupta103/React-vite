@@ -1,8 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -13,7 +10,7 @@
 .button{
   background-color: rgb(123, 27, 27);
   border-radius: 5px;
-}
+} */
 /* .Card {
   padding: 2em;
   margin: 30px;

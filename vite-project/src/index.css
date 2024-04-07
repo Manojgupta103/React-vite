@@ -48,7 +48,13 @@ button{
     line-height: 1.6;
 } */
 
-
+button{
+    background-color: aqua;
+    border: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 10px;
+}
 .menu{
     width: 80%;
     left: -100%;
@@ -67,6 +73,39 @@ button{
 .micon{
     position: absolute;
     right: 10px;
-  }
-  
-  
+}
+
+.modalOverLay{
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modalShow{
+    display: block;
+}
+.ModalDiv{
+    width: 320px;
+    height: 320px;
+    background-color: white;
+    position: fixed;
+    transition: 0.3s;
+    top: -500px;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.showModalDiv{
+    top: 50%;
+};
+
+.en{
+    position: fixed;
+    right: -30px;
+    top: 100px;
+    transform: rotate(90deg);
+}
