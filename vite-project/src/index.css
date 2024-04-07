@@ -93,6 +93,7 @@ button{
     transition: 0.3s;
     top: -500px;
     left: 50%;
+    padding: 20px;
     text-align: center;
     transform: translate(-50%,-50%);
     border-radius: 10px;
