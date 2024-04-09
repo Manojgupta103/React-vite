@@ -3,13 +3,12 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 // import './App.css'
-// import { useState } from 'react';
+import { useState } from 'react';
 // import Header from './Header';
 import './index.css';
-import faqs from './faqs';
 // import { Col, Container, Row } from 'react-bootstrap';
-// import Button from 'react-bootstrap/Button';
-// import { questions } from './data/faqQuestion';
+import Button from 'react-bootstrap/Button';
+import { questions } from './data/faqQuestion';
 // import { blog } from './data/blog';
 // import Card from 'react-bootstrap/Card';
 // import { blog } from './data/blog';
@@ -168,68 +167,59 @@ import faqs from './faqs';
 
 
 
-// function ResponsiveMenu() {
-//   let [menuStatus, setMenuStatus] = useState(questions[0].id) 
-//   let [showAns, setShowAns] = useState(false);
+function ResponsiveMenu() {
+  let [menuStatus, setMenuStatus] = useState(questions[0].id) 
+  let [showAns, setShowAns] = useState(false);
 
-//   const toggleMenu = () => {
-//     setMenuStatus(!menuStatus);
-//   };
-// let [modalStatus,setModalStatus] = useState(false);
-//   return (
-//     <div className="App">
-//       <div>
-//         <h1>Frequently Asked Questions</h1>
-//         <div className='faqouter'>
-
-// {questions.map((faqitems,i)=>{
-//   return (
-//     // eslint-disable-next-line react/jsx-key
-//     <div className='faqitems'>
-//       <h2 onClick={()=>setShowAns(faqitems.id)}>{faqitems.question}</h2>
-//       <p className={showAns==faqitems.id ? 'activesAns' : ''}>{faqitems.answer}</p>
-//     </div>
-//   )
-// })}
-//         </div>
-//       </div>
-
-    
-//       <button className="en" onClick={() => setModalStatus(true)}>Enquire Now</button>
-      
-//       <div onClick={()=>setModalStatus(false)} className={`modalOverLay ${modalStatus?'modalShow':''}`}>
-//       <div className={`ModalDiv ${modalStatus?'showModalDiv':''}`}>
-//           <h3>Enquiry Now <span onClick={() => setModalStatus(false)}>&times;</span></h3>
-//         </div>
-
-//       </div>
-
-// <h1 className="text-3xl font-bold underline text-blue-400">
-//       Hello world!
-//     </h1>
-//       <Button className="micon" onClick={toggleMenu}>
-//         {menuStatus ? <span>&times;</span> : <span>&#9776;</span>}
-//       </Button>
-//       <div className={`menu ${menuStatus ? 'activeMenu' : ''}`}>
-//         <li>Home</li>
-//         <li>About</li>
-//         <li>Course</li>
-//         <li>Gallery</li>
-//         <li>Contact</li>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default ResponsiveMenu;
-
-function Props(){
-  return(
-    <div className='App' >
+  const toggleMenu = () => {
+    setMenuStatus(!menuStatus);
+  };
+let [modalStatus,setModalStatus] = useState(false);
+  return (
+    <div className="App">
       <div>
-      <faqs/>
-      </div>
+        <h1>Frequently Asked Questions</h1>
+        <div className='faqouter'>
+
+{questions.map((faqitems,i)=>{
+  return (
+    // eslint-disable-next-line react/jsx-key
+    <div className='faqitems'>
+      <h2 onClick={()=>setShowAns(faqitems.id)}>{faqitems.question}</h2>
+      <p className={showAns==faqitems.id ? 'activesAns' : ''}>{faqitems.answer}</p>
     </div>
   )
+})}
+        </div>
+      </div>
+
+    
+      <button className="en" onClick={() => setModalStatus(true)}>Enquire Now</button>
+      
+      <div onClick={()=>setModalStatus(false)} className={`modalOverLay ${modalStatus?'modalShow':''}`}>
+      <div className={`ModalDiv ${modalStatus?'showModalDiv':''}`}>
+          <h3>Enquiry Now <span onClick={() => setModalStatus(false)}>&times;</span></h3>
+        </div>
+
+      </div>
+
+<h1 className="text-3xl font-bold underline text-blue-400">
+      Hello world!
+    </h1>
+      <Button className="micon" onClick={toggleMenu}>
+        {menuStatus ? <span>&times;</span> : <span>&#9776;</span>}
+      </Button>
+      <div className={`menu ${menuStatus ? 'activeMenu' : ''}`}>
+        <li>Home</li>
+        <li>About</li>
+        <li>Course</li>
+        <li>Gallery</li>
+        <li>Contact</li>
+      </div>
+    </div>
+  );
 }
-export default Props;
+
+
+
+export default ResponsiveMenu;
