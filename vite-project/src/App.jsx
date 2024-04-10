@@ -192,8 +192,6 @@ let [modalStatus,setModalStatus] = useState(false);
 })}
         </div>
       </div>
-
-    
       <button className="en" onClick={() => setModalStatus(true)}>Enquire Now</button>
       
       <div onClick={()=>setModalStatus(false)} className={`modalOverLay ${modalStatus?'modalShow':''}`}>
@@ -215,11 +213,10 @@ let [modalStatus,setModalStatus] = useState(false);
         <li>Course</li>
         <li>Gallery</li>
         <li>Contact</li>
+        <li>Carrer</li>
       </div>
     </div>
   );
 }
-
-
 
 export default ResponsiveMenu;
