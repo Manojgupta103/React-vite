@@ -150,20 +150,20 @@ import { questions } from './data/faqQuestion';
 // }
 // export default ternary;
 
-// function ShowPassword(){
-//   let [pstatus,setPstatus]=useState(false);
+function ShowPassword(){
+  let [pstatus,setPstatus]=useState(false);
 
-//   return(
-//     <div className='App'>
-//       <input type={pstatus ? 'text' : "password"}/> 
-//       <button onClick={() => setPstatus(!pstatus)}>
-//       {pstatus ? "Hide" : "Show"}
-//       </button>
-//       <br></br>
-//     </div>
-//   )
-// }
-// export default ShowPassword;
+  return(
+    <div className='App'>
+      <input type={pstatus ? 'text' : "password"}/> 
+      <button onClick={() => setPstatus(!pstatus)}>
+      {pstatus ? "Hide" : "Show"}
+      </button>
+      <br></br>
+    </div>
+  )
+}
+
 
 
 
@@ -219,4 +219,4 @@ let [modalStatus,setModalStatus] = useState(false);
   );
 }
 
-export default ResponsiveMenu;
+export default ResponsiveMenu; ShowPassword;
