@@ -181,7 +181,7 @@ let [modalStatus,setModalStatus] = useState(false);
         <h1>Frequently Asked Questions</h1>
         <div className='faqouter'>
 
-{questions.map((faqitems,i)=>{
+{questions.map((faqitems)=>{
   return (
     // eslint-disable-next-line react/jsx-key
     <div className='faqitems'>
