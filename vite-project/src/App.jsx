@@ -5,12 +5,15 @@
 // import './App.css'
 // import { useState } from 'react';
 // import Header from './Header';
-import { NotificationContainer, NotificationManager } from 'react-notifications';
+// import { NotificationContainer, NotificationManager } from 'react-notifications';
+// import { Button } from 'bootstrap';
+import { useState } from 'react';
+import tabs from './data/tabs';
 import './index.css';
 // import { Col, Container, Row } from 'react-bootstrap';
 // import Button from 'react-bootstrap/Button';
 // import { questions } from './data/faqQuestion';
-import 'react-notifications/lib/notifications.css';
+// import 'react-notifications/lib/notifications.css';
 // import { blog } from './data/blog';
 // import Card from 'react-bootstrap/Card';
 // import { blog } from './data/blog';
@@ -235,53 +238,91 @@ import 'react-notifications/lib/notifications.css';
 // }
 // export default Notifiy;
 
-import React from 'react';
+// import React from 'react';
 
-class Example extends React.Component {
-  createNotification = (type) => {
-    return () => {
-      switch (type) {
-        case 'info':
-          NotificationManager.info('Info message');
-          break;
-        case 'success':
-          NotificationManager.success('Success message', 'Title here');
-          break;
-        case 'warning':
-          NotificationManager.warning('Warning message', 'Close after 3000ms', 3000);
-          break;
-        case 'error':
-          NotificationManager.error('Error message', 'Click me!', 5000, () => {
-            alert('callback');
-          });
-          break;
-      }
-    };
-  };
+// class Example extends React.Component {
+//   createNotification = (type) => {
+//     return () => {
+//       switch (type) {
+//         case 'info':
+//           NotificationManager.info('Info message');
+//           break;
+//         case 'success':
+//           NotificationManager.success('Success message', 'Title here');
+//           break;
+//         case 'warning':
+//           NotificationManager.warning('Warning message', 'Close after 3000ms', 3000);
+//           break;
+//         case 'error':
+//           NotificationManager.error('Error message', 'Click me!', 5000, () => {
+//             alert('callback');
+//           });
+//           break;
+//       }
+//     };
+//   };
 
-  render() {
-    return (
-      <div>
-        <button className='btn btn-info'
-          onClick={this.createNotification('info')}>Info
-        </button>
-        <hr/>
-        <button className='btn btn-success'
-          onClick={this.createNotification('success')}>Success
-        </button>
-        <hr/>
-        <button className='btn btn-warning'
-          onClick={this.createNotification('warning')}>Warning
-        </button>
-        <hr/>
-        <button className='btn btn-danger'
-          onClick={this.createNotification('error')}>Error
-        </button>
+//   render() {
+//     return (
+//       <div>
+//         <button className='btn btn-info'
+//           onClick={this.createNotification('info')}>Info
+//         </button>
+//         <hr/>
+//         <button className='btn btn-success'
+//           onClick={this.createNotification('success')}>Success
+//         </button>
+//         <hr/>
+//         <button className='btn btn-warning'
+//           onClick={this.createNotification('warning')}>Warning
+//         </button>
+//         <hr/>
+//         <button className='btn btn-danger'
+//           onClick={this.createNotification('error')}>Error
+//         </button>
 
-        <NotificationContainer/>
-      </div>
-    );
-  }
+//         <NotificationContainer/>
+//       </div>
+//     );
+//   }
+// }
+
+// export default Example;
+
+function Tabs() {
+
+    let [activeTab, setactiveTab] = useState(0)
+    let[activeContent, setactiveContent] = useState(tabs[0])
+    let changeData = (index)=>{
+        setactiveTab(index)
+        setactiveContent(tabs[index])
+    }
+return(
+    <div className='TabsOuter'>
+  <div className='App'>
+<h1 style={{textAlign:'centre', color: 'red'}}>Tabs</h1>
+    <ul>
+        {tabs.map((tabsItems,index) =>{
+            return(
+                <li key={index}>
+                    <button onClick={()=>changeData(index)} className={activeTab==index ? 'activeButton' : ''}>{tabsItems.title}</button>
+                </li>
+            )
+        })}
+
+    </ul>
+    {activeContent!==undefined ?
+        <p>
+            {activeContent.description}
+        </p>
+        :
+        ''
+    }
+    </div>
+    </div>
+);
+
+
 }
 
-export default Example;
+export default Tabs;
