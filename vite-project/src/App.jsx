@@ -347,11 +347,12 @@ function App() {
                 <div className='col-lg-6'>
                     <form onSubmit={handlesubmit}>
                         <div className='text-start my-3'>
-                            <label>UserName</label>
+                            <label>UserName </label>
                             <input type='text' onChange={(event)=>setuname(event.target.value)} className='form-control' value={uname}/>
                         </div>
+                        <br></br>
                         <div className='text-start my-3'>
-                            <label>Password</label>
+                            <label>Password </label>
                             <input type='password' onChange={(event)=>setpassword(event.target.value)} className='form-control' value={password}/>
                         </div>
                         <div className='text-start my-3'>
