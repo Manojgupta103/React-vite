@@ -8,7 +8,7 @@
 // import { NotificationContainer, NotificationManager } from 'react-notifications';
 // import { Button } from 'bootstrap';
 import { useState } from 'react';
-import tabs from './data/tabs';
+// import tabs from './data/tabs';
 import './index.css';
 // import { Col, Container, Row } from 'react-bootstrap';
 // import Button from 'react-bootstrap/Button';
@@ -289,40 +289,80 @@ import './index.css';
 
 // export default Example;
 
-function Tabs() {
+// function Tabs() {
 
-    let [activeTab, setactiveTab] = useState(0)
-    let[activeContent, setactiveContent] = useState(tabs[0])
-    let changeData = (index)=>{
-        setactiveTab(index)
-        setactiveContent(tabs[index])
+//     let [activeTab, setactiveTab] = useState(0)
+//     let[activeContent, setactiveContent] = useState(tabs[0])
+//     let changeData = (index)=>{
+//         setactiveTab(index)
+//         setactiveContent(tabs[index])
+//     }
+// return(
+//     <div className='TabsOuter'>
+//   <div className='App'>
+// <h1 style={{textAlign:'centre', color: 'red'}}>Tabs</h1>
+//     <ul>
+//         {tabs.map((tabsItems,index) =>{
+//             return(
+//                 <li key={index}>
+//                     <button onClick={()=>changeData(index)} className={activeTab==index ? 'activeButton' : ''}>{tabsItems.title}</button>
+//                 </li>
+//             )
+//         })}
+
+//     </ul>
+//     {activeContent!==undefined ?
+//         <p>
+//             {activeContent.description}
+//         </p>
+//         :
+//         ''
+//     }
+//     </div>
+//     </div>
+// );
+
+
+// }
+
+// export default Tabs;
+
+/* React Controlled Components*/
+function App() {
+    let [uname,setuname]=useState('')
+    let [password,setpassword]=useState('')
+    let handlesubmit=(event)=>{
+        event.preventDefault()
     }
-return(
-    <div className='TabsOuter'>
-  <div className='App'>
-<h1 style={{textAlign:'centre', color: 'red'}}>Tabs</h1>
-    <ul>
-        {tabs.map((tabsItems,index) =>{
-            return(
-                <li key={index}>
-                    <button onClick={()=>changeData(index)} className={activeTab==index ? 'activeButton' : ''}>{tabsItems.title}</button>
-                </li>
-            )
-        })}
+    console.log(uname, password)
 
-    </ul>
-    {activeContent!==undefined ?
-        <p>
-            {activeContent.description}
-        </p>
-        :
-        ''
-    }
+    // let getuname=(event)=>{
+    //     setuname(event.target.value)
+    // }
+
+  return (
+    <div className="App">
+        <div className='container'>
+            <div className='row'>
+                <div className='col-lg-6'>
+                    <form onSubmit={handlesubmit}>
+                        <div className='text-start my-3'>
+                            <label>UserName</label>
+                            <input type='text' onChange={(event)=>setuname(event.target.value)} className='form-control' value={uname}/>
+                        </div>
+                        <div className='text-start my-3'>
+                            <label>Password</label>
+                            <input type='password' onChange={(event)=>setpassword(event.target.value)} className='form-control' value={password}/>
+                        </div>
+                        <div className='text-start my-3'>
+                            <button className='btn btn-primary'>Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-    </div>
-);
-
-
+  )
 }
 
-export default Tabs;
+export default App;

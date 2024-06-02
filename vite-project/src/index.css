@@ -48,13 +48,13 @@ button{
     line-height: 1.6;
 } */
 
-/* button{
+button{
     background-color: aqua;
     border: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
     padding: 10px;
-} */
+}
 /* .menu{
     width: 80%;
     left: -100%;
@@ -99,9 +99,9 @@ button{
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 } */
 
-.showModalDiv{
+/* .showModalDiv{
     top: 50%;
-};
+}; */
 
 /* .en{
     position: fixed;
@@ -149,7 +149,7 @@ button{
     padding: 10px !important;
 } */
 
-.TabsOuter{
+/* .TabsOuter{
     margin: auto;
     width: 200px;
 }
@@ -175,4 +175,4 @@ button{
 .activeButton{
     background-color: red !important;
     color: white !important;
-}
+} */
